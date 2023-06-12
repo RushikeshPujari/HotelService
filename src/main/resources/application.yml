@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+spring:
+  h2:
+    console:
+      enabled: true
+      
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: root2
+    password: root2
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect  
+      
+  application:
+    name: HOTEL_SERVICE
+
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+    
