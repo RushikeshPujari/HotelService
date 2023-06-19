@@ -1,8 +1,12 @@
 package com.RP.hotel.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "hotels")
@@ -13,6 +17,17 @@ public class Hotel {
 	private String name;
 	private String location;
 	private String about;
+	
+	@Transient  // --> This we dont want to store in database.
+	private List<Rating> ratings = new ArrayList<Rating>();
+
+	public List<Rating> getRatings() {
+		return ratings;
+	}
+
+	public void setRatings(List<Rating> rating) {
+		this.ratings = rating;
+	}
 	public String getId() {
 		return id;
 	}
