@@ -3,6 +3,8 @@ package com.RP.hotel.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.antlr.v4.runtime.misc.NotNull;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
